@@ -1,0 +1,158 @@
+
+========== Test 1 ==========
+Round input = CC00CCFFF0AAF0AA
+Round key   = 1B02EFFC7072
+L0          = CC00CCFF
+R0          = F0AAF0AA
+
+E(R0)       = 7A15557A1555
+E(R0) XOR K = 6117BA866527
+S1: input=18 row=0 col=12 output=5
+S2: input=11 row=1 col= 8 output=C
+S3: input=1E row=0 col=15 output=8
+S4: input=3A row=2 col=13 output=2
+S5: input=21 row=3 col= 0 output=B
+S6: input=26 row=2 col= 3 output=5
+S7: input=14 row=0 col=10 output=9
+S8: input=27 row=3 col= 3 output=7
+S-box output= 5C82B597
+F(R0, K)    = 234AA9BB
+L1          = F0AAF0AA
+R1          = EF4A6544
+
+Round output (hex) = F0AAF0AAEF4A6544
+Expected     (hex) = F0AAF0AAEF4A6544
+Round output (bin) = 11110000 10101010 11110000 10101010 11101111 01001010 01100101 01000100
+Test               = PASS
+
+========== Test 2 ==========
+Round input = 0000000000000000
+Round key   = 000000000000
+L0          = 00000000
+R0          = 00000000
+
+E(R0)       = 000000000000
+E(R0) XOR K = 000000000000
+S1: input=00 row=0 col= 0 output=E
+S2: input=00 row=0 col= 0 output=F
+S3: input=00 row=0 col= 0 output=A
+S4: input=00 row=0 col= 0 output=7
+S5: input=00 row=0 col= 0 output=2
+S6: input=00 row=0 col= 0 output=C
+S7: input=00 row=0 col= 0 output=4
+S8: input=00 row=0 col= 0 output=D
+S-box output= EFA72C4D
+F(R0, K)    = D8D8DBBC
+L1          = 00000000
+R1          = D8D8DBBC
+
+Round output (hex) = 00000000D8D8DBBC
+Expected     (hex) = 00000000D8D8DBBC
+Round output (bin) = 00000000 00000000 00000000 00000000 11011000 11011000 11011011 10111100
+Test               = PASS
+
+========== Test 3 ==========
+Round input = FFFFFFFFFFFFFFFF
+Round key   = FFFFFFFFFFFF
+L0          = FFFFFFFF
+R0          = FFFFFFFF
+
+E(R0)       = FFFFFFFFFFFF
+E(R0) XOR K = 000000000000
+S1: input=00 row=0 col= 0 output=E
+S2: input=00 row=0 col= 0 output=F
+S3: input=00 row=0 col= 0 output=A
+S4: input=00 row=0 col= 0 output=7
+S5: input=00 row=0 col= 0 output=2
+S6: input=00 row=0 col= 0 output=C
+S7: input=00 row=0 col= 0 output=4
+S8: input=00 row=0 col= 0 output=D
+S-box output= EFA72C4D
+F(R0, K)    = D8D8DBBC
+L1          = FFFFFFFF
+R1          = 27272443
+
+Round output (hex) = FFFFFFFF27272443
+Expected     (hex) = FFFFFFFF27272443
+Round output (bin) = 11111111 11111111 11111111 11111111 00100111 00100111 00100100 01000011
+Test               = PASS
+
+========== Test 4 ==========
+Round input = 0123456789ABCDEF
+Round key   = 123456789ABC
+L0          = 01234567
+R0          = 89ABCDEF
+
+E(R0)       = C53D57E5BF5F
+E(R0) XOR K = D709019D25E3
+S1: input=35 row=3 col=10 output=3
+S2: input=30 row=2 col= 8 output=5
+S3: input=24 row=2 col= 2 output=4
+S4: input=01 row=1 col= 0 output=D
+S5: input=27 row=3 col= 3 output=7
+S6: input=12 row=0 col= 9 output=D
+S7: input=17 row=1 col=11 output=C
+S8: input=23 row=3 col= 1 output=1
+S-box output= 354D7DC1
+F(R0, K)    = B0157ADB
+L1          = 89ABCDEF
+R1          = B1363FBC
+
+Round output (hex) = 89ABCDEFB1363FBC
+Expected     (hex) = 89ABCDEFB1363FBC
+Round output (bin) = 10001001 10101011 11001101 11101111 10110001 00110110 00111111 10111100
+Test               = PASS
+
+========== Test 5 ==========
+Round input = 1234567800000000
+Round key   = 000000000000
+L0          = 12345678
+R0          = 00000000
+
+E(R0)       = 000000000000
+E(R0) XOR K = 000000000000
+S1: input=00 row=0 col= 0 output=E
+S2: input=00 row=0 col= 0 output=F
+S3: input=00 row=0 col= 0 output=A
+S4: input=00 row=0 col= 0 output=7
+S5: input=00 row=0 col= 0 output=2
+S6: input=00 row=0 col= 0 output=C
+S7: input=00 row=0 col= 0 output=4
+S8: input=00 row=0 col= 0 output=D
+S-box output= EFA72C4D
+F(R0, K)    = D8D8DBBC
+L1          = 00000000
+R1          = CAEC8DC4
+
+Round output (hex) = 00000000CAEC8DC4
+Expected     (hex) = 00000000CAEC8DC4
+Round output (bin) = 00000000 00000000 00000000 00000000 11001010 11101100 10001101 11000100
+Test               = PASS
+
+========== Test 6 ==========
+Round input = 00000000FFFFFFFF
+Round key   = 000000000000
+L0          = 00000000
+R0          = FFFFFFFF
+
+E(R0)       = FFFFFFFFFFFF
+E(R0) XOR K = FFFFFFFFFFFF
+S1: input=3F row=3 col=15 output=D
+S2: input=3F row=3 col=15 output=9
+S3: input=3F row=3 col=15 output=C
+S4: input=3F row=3 col=15 output=E
+S5: input=3F row=3 col=15 output=3
+S6: input=3F row=3 col=15 output=D
+S7: input=3F row=3 col=15 output=C
+S8: input=3F row=3 col=15 output=B
+S-box output= D9CE3DCB
+F(R0, K)    = 38DBF9CB
+L1          = FFFFFFFF
+R1          = 38DBF9CB
+
+Round output (hex) = FFFFFFFF38DBF9CB
+Expected     (hex) = FFFFFFFF38DBF9CB
+Round output (bin) = 11111111 11111111 11111111 11111111 00111000 11011011 11111001 11001011
+Test               = PASS
+
+Passed 6 of 6 tests.

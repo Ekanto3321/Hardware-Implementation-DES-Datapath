@@ -1,0 +1,66 @@
+ncsim: 10.20-s100: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm tb_des_round.failed tb_des_round.passed tb_des_round.round_key tb_des_round.state_in tb_des_round.state_out
+Created probe 1
+ncsim> run
+
+Test 1
+Input    = cc00ccfff0aaf0aa
+Key      = 1b02effc7072
+Output   = f0aaf0aaef4a6544
+Binary   = 1111000010101010111100001010101011101111010010100110010101000100
+Expected = f0aaf0aaef4a6544
+PASS
+
+Test 2
+Input    = 0000000000000000
+Key      = 000000000000
+Output   = 00000000d8d8dbbc
+Binary   = 0000000000000000000000000000000011011000110110001101101110111100
+Expected = 00000000d8d8dbbc
+PASS
+
+Test 3
+Input    = ffffffffffffffff
+Key      = ffffffffffff
+Output   = ffffffff27272443
+Binary   = 1111111111111111111111111111111100100111001001110010010001000011
+Expected = ffffffff27272443
+PASS
+
+Test 4
+Input    = 0123456789abcdef
+Key      = 123456789abc
+Output   = 89abcdefb1363fbc
+Binary   = 1000100110101011110011011110111110110001001101100011111110111100
+Expected = 89abcdefb1363fbc
+PASS
+
+Test 5
+Input    = 1234567800000000
+Key      = 000000000000
+Output   = 00000000caec8dc4
+Binary   = 0000000000000000000000000000000011001010111011001000110111000100
+Expected = 00000000caec8dc4
+PASS
+
+Test 6
+Input    = 00000000ffffffff
+Key      = 000000000000
+Output   = ffffffff38dbf9cb
+Binary   = 1111111111111111111111111111111100111000110110111111100111001011
+Expected = ffffffff38dbf9cb
+PASS
+
+Passed: 6  Failed: 0
+Simulation complete via $finish(1) at time 60 NS + 0
+./tb_des_round.v:50         $finish;
+ncsim> ^C
+ncsim> exit
+ncsim: Memory Usage - 20.7M program + 32.5M data = 53.2M total
+ncsim: CPU Usage - 0.6s system + 1.8s user = 2.5s total (153.5s, 1.6% cpu)
